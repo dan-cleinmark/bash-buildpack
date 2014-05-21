@@ -8,6 +8,14 @@ CACHE_DIR=$2
 
 echo 'compiling buildpack!'
 
+
+# Build netcat
+pushd $BUILD_DIR/src/netcat-0.7.1/
+./configure
+make
+cp src/netcat $BUILD_DIR/
+
+# Doesn't seem to work...must manually do a 'cf push -c <startup script>' instead
 mkdir -p $BUILD_DIR/.profile.d
 #echo './start.sh' > $BUILD_DIR/.profile.d/bash.sh
 echo 'bash: bash start.sh' > $BUILD_DIR/Procfile
