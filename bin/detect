@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -e 'start.sh' ]; then
+  echo "Lets do some bashing!"
+  exit 0
+fi
+echo "start.sh script not found, skipping."
+exit 1
