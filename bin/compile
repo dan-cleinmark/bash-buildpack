@@ -10,4 +10,4 @@ echo 'compiling buildpack!'
 
 mkdir -p $BUILD_DIR/.profile.d
 #echo './start.sh' > $BUILD_DIR/.profile.d/bash.sh
-echo 'bash: ./start.sh' > $BUILD_DIR/Procfile
+echo 'bash: bash start.sh' > $BUILD_DIR/Procfile
