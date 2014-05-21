@@ -2,5 +2,5 @@
 set -x
 cat <<EOF
 default_process_types:
-  bash: ./start.sh
+  bash: bash start.sh
 EOF
