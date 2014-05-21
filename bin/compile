@@ -7,4 +7,4 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 echo 'compiling buildpack!'
-echo './start.sh' > $BUILD_DIR/Procfile
+echo './start.sh' > $BUILD_DIR/.profile.d/bash.sh
