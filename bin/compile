@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p $1 $2
+
 BUILD_DIR=$1
 CACHE_DIR=$2
 
