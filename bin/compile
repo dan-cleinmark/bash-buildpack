@@ -10,10 +10,13 @@ echo 'compiling buildpack!'
 
 
 # Build netcat
-pushd $BUILD_DIR/src/netcat-0.7.1/
+pushd $CACHE_DIR
+curl 'https://raw.githubusercontent.com/dan-cleinmark/bash-buildpack/master/src/netcat-0.7.1.tar.gz'|tar xvz
+cd netcat-0.7.1
 ./configure
 make
 cp src/netcat $BUILD_DIR/
+popd
 
 # Doesn't seem to work...must manually do a 'cf push -c <startup script>' instead
 mkdir -p $BUILD_DIR/.profile.d
